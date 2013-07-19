@@ -26,7 +26,7 @@ class Actor(gevent.Greenlet):
 # sample implementation			
 class Pinger(Actor):
 	def receive(self, msg):
-		print(msg)
+		print(msg, self.inbox)
 		pong.inbox.put('ping')
 		gevent.sleep(1)
 		
@@ -34,7 +34,7 @@ ping = Pinger()
 
 class Ponger(Actor):
 	def receive(self, msg):
-		print(msg)
+		print(msg, self.inbox)
 		ping.inbox.put('pong')
 		gevent.sleep(1)
 		
