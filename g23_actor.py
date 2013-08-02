@@ -2,7 +2,9 @@ import gevent
 from gevent import Greenlet
 from gevent.queue import Queue
 
-
+'''
+Actor pattern
+'''
 	
 
 class Actor(gevent.Greenlet):

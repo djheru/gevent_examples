@@ -1,6 +1,9 @@
 import gevent
 from gevent import Timeout
 
+'''
+setting timeout args for different calls
+'''
 def wait():
 	gevent.sleep(2)
 	

@@ -1,6 +1,10 @@
 import gevent
 import signal
 
+'''
+Listen for SIGQUIT events and invoke gevent.shutdown before exit
+'''
+
 def run_forever():
 	print("I'm busy, come back later!")
 	gevent.sleep(1000)
